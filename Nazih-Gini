@@ -1,0 +1,22 @@
+#Nazih Safi 
+#April 09, 2015
+#Gini function 
+#source('H:/www/Research/McNair/Coding/gini.R')
+gini<- function(x){
+  
+y=cumsum(c(0,x))/sum(x)
+#z=seq (0,1,length=length(y))
+#head would be the left reimman sum 
+#tail would be the right reimman sum
+z=seq (0,1,length=length(y))
+plot(y,z)
+head(z,n=-1)
+tail(z,n=length(x))
+l=sum(head(y, n=-1)*diff(z))
+r=sum(tail(y, n=length())*diff(z))
+trap=(l+r)/2
+res=lm(z~y)
+abline(res)
+gc=1-2*trap
+return(gc)
+}
