@@ -37,15 +37,15 @@ plot(NEE_SUM_2006)
 MIN6=min(NEE_SUM_2006)
 MAX6=max(NEE_SUM_2006)
 
-plot(NEE_SUM_2006, main="AU-Fog.R", sub="Growing Season 2006", ylim=range(-335.28,0.35))
+plot(NEE_SUM_2006,main="Growing Season 2006", sub="Growing Season 2006", ylim=range(MIN6,MAX6))
 #?plot
+which(NEE_SUM_2006==MAX6)
+gs6_SUM=NEE_SUM_2006[NEE_SUM_2006<=MAX6 & NEE_SUM_2006>MIN6]
 
-gs6=NEE_2006[NEE_SUM_2006<=MAX6 & NEE_SUM_2006>MIN6]
+plot(NEE_SUM_2006, main="Growing Season 2006", sub="Growing Season 2006", xlim=range(11,250), ylim=range(MIN6,MAX6))
+plot(NEE_SUM_2006, main="Growing Season 2006", sub="Growing Season 2006")
 
-gs6_SUM=cumsum(gs6)
-plot(gs6_SUM)
-
-#year 2007 growing season below 
+#year 20067growing season below 
 
 NEE_2007=NEE[years==2007]
 #plot(NEE_2007)
@@ -55,10 +55,10 @@ plot(NEE_SUM_2007)
 MIN7=min(NEE_SUM_2007)
 MAX7=max(NEE_SUM_2007)
 
-plot(NEE_SUM_2007, main="AU-Fog.R", sub="Growing Season 2007", ylim=range(-.289.53,-.94))
+plot(NEE_SUM_2007,main="Growing Season 2007", sub="Growing Season 2007", ylim=range(MIN7,MAX7))
 #?plot
 
 gs7=NEE_2007[NEE<=MAX7 & NEE>MIN7]
 
-gs7_SUM=cumsum(gs)
-plot(gs7_SUM)
+gs7_SUM=cumsum(gs7)
+plot(gs7_SUM, main="Growing Season 2007", sub="Growing Season 2007", ylim=range(MIN7,MAX7))
